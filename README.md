@@ -1,1 +1,1 @@
-# snowsql-parser
+# mysql-parser
