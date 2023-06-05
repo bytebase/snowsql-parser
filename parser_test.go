@@ -61,6 +61,8 @@ func TestSnowflakeSQLParser(t *testing.T) {
 
 			p.BuildParseTrees = true
 
+			_ = p.Sql()
+
 			require.Equal(t, 0, lexerErrors.errors)
 			require.Equal(t, 0, parserErrors.errors)
 		})
