@@ -95,7 +95,8 @@ merge_matches
     ;
 
 merge_update_delete
-    : UPDATE SET column_name EQ expr ( column_name EQ expr )*
+    // : UPDATE SET column_name EQ expr ( column_name EQ expr )*
+    : UPDATE SET (alias DOT)? column_name EQ expr ( column_name EQ expr )*
     | DELETE
     ;
 
