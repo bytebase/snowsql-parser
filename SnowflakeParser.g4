@@ -1144,7 +1144,7 @@ clustering_action
 table_column_action
     : ADD COLUMN? column_name data_type
         ( DEFAULT expr | ( AUTOINCREMENT | IDENTITY ) (  '(' num COMMA num ')' | START num INCREMENT num  )? )?
-        inline_constraint?
+        null_not_null? inline_constraint?
         ( WITH? MASKING POLICY id_ ( USING '(' column_name COMMA column_list ')' )? )?
     | RENAME COLUMN column_name TO column_name
     | alter_modify '('?

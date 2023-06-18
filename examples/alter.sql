@@ -35,3 +35,5 @@ alter task ts suspend ;
 alter user u reset password ;
 alter view vw set secure ;
 alter warehouse wh suspend ;
+alter table t add column a varchar not null;
+alter table t add column a varchar not null not null constraint haha unique;
