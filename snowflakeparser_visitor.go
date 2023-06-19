@@ -1602,4 +1602,7 @@ type SnowflakeParserVisitor interface {
 
 	// Visit a parse tree produced by SnowflakeParser#limit_clause.
 	VisitLimit_clause(ctx *Limit_clauseContext) interface{}
+
+	// Visit a parse tree produced by SnowflakeParser#supplement_non_reserved_words.
+	VisitSupplement_non_reserved_words(ctx *Supplement_non_reserved_wordsContext) interface{}
 }
