@@ -128,8 +128,8 @@ snowflake_reserved_keyword = {
 def read_tokens_name_before_token_from_lexer_file(filepath: str, token: str) -> list[str]:    
     tokens_name_before_token = []
     regex = r"^(?P<token_name>[A-Z_]+)\s*:"
-    start_placeholder = "Build id contains the build non reserved keywords start."
-    stop_placeholder = "Build id contains the build non reserved keywords stop."
+    start_placeholder = "Build id contains the non reserved keywords start."
+    stop_placeholder = "Build id contains the non reserved keywords stop."
     begin = False
     with open(filepath, "r") as lexer_file:
         lines = lexer_file.readlines()

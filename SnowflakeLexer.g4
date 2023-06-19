@@ -25,7 +25,7 @@ lexer grammar SnowflakeLexer;
 
 options { caseInsensitive = true; }
 
-// Build id contains the build non reserved keywords start.
+// Build id contains the non reserved keywords start.
 AAD_PROVISIONER_Q:                                     '\'AAD_PROVISIONER\'';
 ABORT:                                                 'ABORT';
 ABORT_AFTER_WAIT:                                      'ABORT_AFTER_WAIT';
@@ -1096,7 +1096,7 @@ LISTAGG: 'LISTAGG';
 
 DUMMY: 'DUMMY'; //Dummy is not a keyword but rules reference it. As to be cleaned.
 
-// Build id contains the build non reserved keywords stop.
+// Build id contains the non reserved keywords stop.
 
 SPACE:                  [ \t\r\n]+                    -> channel(HIDDEN);
 
