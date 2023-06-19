@@ -1603,6 +1603,9 @@ type SnowflakeParserListener interface {
 	// EnterLimit_clause is called when entering the limit_clause production.
 	EnterLimit_clause(c *Limit_clauseContext)
 
+	// EnterSupplement_non_reserved_words is called when entering the supplement_non_reserved_words production.
+	EnterSupplement_non_reserved_words(c *Supplement_non_reserved_wordsContext)
+
 	// ExitSnowflake_file is called when exiting the snowflake_file production.
 	ExitSnowflake_file(c *Snowflake_fileContext)
 
@@ -3198,4 +3201,7 @@ type SnowflakeParserListener interface {
 
 	// ExitLimit_clause is called when exiting the limit_clause production.
 	ExitLimit_clause(c *Limit_clauseContext)
+
+	// ExitSupplement_non_reserved_words is called when exiting the supplement_non_reserved_words production.
+	ExitSupplement_non_reserved_words(c *Supplement_non_reserved_wordsContext)
 }

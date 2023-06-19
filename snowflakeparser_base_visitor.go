@@ -2134,3 +2134,7 @@ func (v *BaseSnowflakeParserVisitor) VisitFirst_next(ctx *First_nextContext) int
 func (v *BaseSnowflakeParserVisitor) VisitLimit_clause(ctx *Limit_clauseContext) interface{} {
 	return v.VisitChildren(ctx)
 }
+
+func (v *BaseSnowflakeParserVisitor) VisitSupplement_non_reserved_words(ctx *Supplement_non_reserved_wordsContext) interface{} {
+	return v.VisitChildren(ctx)
+}

@@ -3391,3 +3391,11 @@ func (s *BaseSnowflakeParserListener) EnterLimit_clause(ctx *Limit_clauseContext
 
 // ExitLimit_clause is called when production limit_clause is exited.
 func (s *BaseSnowflakeParserListener) ExitLimit_clause(ctx *Limit_clauseContext) {}
+
+// EnterSupplement_non_reserved_words is called when production supplement_non_reserved_words is entered.
+func (s *BaseSnowflakeParserListener) EnterSupplement_non_reserved_words(ctx *Supplement_non_reserved_wordsContext) {
+}
+
+// ExitSupplement_non_reserved_words is called when production supplement_non_reserved_words is exited.
+func (s *BaseSnowflakeParserListener) ExitSupplement_non_reserved_words(ctx *Supplement_non_reserved_wordsContext) {
+}
