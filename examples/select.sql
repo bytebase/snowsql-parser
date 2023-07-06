@@ -32,3 +32,44 @@ SELECT C1 IS NULL, C2 IS NOT NULL, C1 = C2 FROM T1;
 SELECT SPLIT(C1,';') FROM T1;
 SELECT SPLIT_PART(C1,';',1) FROM T1;
 SELECT C1 FROM T1 WHERE NOT C2;
+
+-- Test Recursive CTE
+WITH RECURSIVE managers 
+      -- Column list of the "view"
+      (indent, employee_ID, manager_ID, employee_title, sort_key) 
+    AS 
+      -- Common Table Expression
+      (
+        -- Anchor Clause
+        SELECT '' AS indent, 
+            employee_ID, manager_ID, title AS employee_title, skey(employee_ID)
+          FROM employees
+          WHERE title = 'President'
+
+        UNION ALL
+
+        -- Recursive Clause
+        SELECT indent || '--- ',
+            employees.employee_ID, employees.manager_ID, employees.title, 
+            sort_key || skey(employees.employee_ID)
+          FROM employees JOIN managers 
+            ON employees.manager_ID = managers.employee_ID
+      )
+
+  -- This is the "main select".
+  SELECT 
+         indent || employee_title AS Title, employee_ID, 
+         manager_ID, 
+         sort_key
+    FROM managers
+    ORDER BY sort_key   
+  ;
+
+-- Test CTE in a CTE
+WITH CTE1 AS (
+    WITH CTE2 AS (
+        SELECT * FROM T
+    )
+    SELECT * FROM CTE2
+)
+SELECT * FROM CTE1;
