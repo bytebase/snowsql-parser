@@ -1396,6 +1396,12 @@ type SnowflakeParserVisitor interface {
 	// Visit a parse tree produced by SnowflakeParser#common_table_expression.
 	VisitCommon_table_expression(ctx *Common_table_expressionContext) interface{}
 
+	// Visit a parse tree produced by SnowflakeParser#anchor_clause.
+	VisitAnchor_clause(ctx *Anchor_clauseContext) interface{}
+
+	// Visit a parse tree produced by SnowflakeParser#recursive_clause.
+	VisitRecursive_clause(ctx *Recursive_clauseContext) interface{}
+
 	// Visit a parse tree produced by SnowflakeParser#select_statement.
 	VisitSelect_statement(ctx *Select_statementContext) interface{}
 

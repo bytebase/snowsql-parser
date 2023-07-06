@@ -1396,6 +1396,12 @@ type SnowflakeParserListener interface {
 	// EnterCommon_table_expression is called when entering the common_table_expression production.
 	EnterCommon_table_expression(c *Common_table_expressionContext)
 
+	// EnterAnchor_clause is called when entering the anchor_clause production.
+	EnterAnchor_clause(c *Anchor_clauseContext)
+
+	// EnterRecursive_clause is called when entering the recursive_clause production.
+	EnterRecursive_clause(c *Recursive_clauseContext)
+
 	// EnterSelect_statement is called when entering the select_statement production.
 	EnterSelect_statement(c *Select_statementContext)
 
@@ -2994,6 +3000,12 @@ type SnowflakeParserListener interface {
 
 	// ExitCommon_table_expression is called when exiting the common_table_expression production.
 	ExitCommon_table_expression(c *Common_table_expressionContext)
+
+	// ExitAnchor_clause is called when exiting the anchor_clause production.
+	ExitAnchor_clause(c *Anchor_clauseContext)
+
+	// ExitRecursive_clause is called when exiting the recursive_clause production.
+	ExitRecursive_clause(c *Recursive_clauseContext)
 
 	// ExitSelect_statement is called when exiting the select_statement production.
 	ExitSelect_statement(c *Select_statementContext)

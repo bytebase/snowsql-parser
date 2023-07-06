@@ -3685,7 +3685,20 @@ with_expression
     ;
 
 common_table_expression
-    : id_ ('(' columns=column_list ')')? AS '(' select_statement set_operators* ')'
+    : RECURSIVE? id_ ('(' columns=column_list ')')? AS '(' anchor_clause UNION ALL recursive_clause ')'
+    // | id_ ('(' columns=column_list ')')? AS '(' select_statement set_operators* ')'
+    | id_ ('(' columns=column_list ')')? AS '(' query_statement ')'
+    ;
+
+anchor_clause
+    : query_statement
+    ;
+
+recursive_clause
+    // TODO(zp): from the snowflake document, https://docs.snowflake.com/en/user-guide/queries-cte#recursive-ctes-and-hierarchical-data
+    // the recursive_clause should not contains aggregate/windows function, LIMIT, ...
+    // but actually, we can use LIMIT(and others?), let's implement a superset for now...
+    : query_statement
     ;
 
 select_statement

@@ -2970,6 +2970,18 @@ func (s *BaseSnowflakeParserListener) EnterCommon_table_expression(ctx *Common_t
 func (s *BaseSnowflakeParserListener) ExitCommon_table_expression(ctx *Common_table_expressionContext) {
 }
 
+// EnterAnchor_clause is called when production anchor_clause is entered.
+func (s *BaseSnowflakeParserListener) EnterAnchor_clause(ctx *Anchor_clauseContext) {}
+
+// ExitAnchor_clause is called when production anchor_clause is exited.
+func (s *BaseSnowflakeParserListener) ExitAnchor_clause(ctx *Anchor_clauseContext) {}
+
+// EnterRecursive_clause is called when production recursive_clause is entered.
+func (s *BaseSnowflakeParserListener) EnterRecursive_clause(ctx *Recursive_clauseContext) {}
+
+// ExitRecursive_clause is called when production recursive_clause is exited.
+func (s *BaseSnowflakeParserListener) ExitRecursive_clause(ctx *Recursive_clauseContext) {}
+
 // EnterSelect_statement is called when production select_statement is entered.
 func (s *BaseSnowflakeParserListener) EnterSelect_statement(ctx *Select_statementContext) {}
 

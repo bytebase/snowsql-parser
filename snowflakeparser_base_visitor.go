@@ -1859,6 +1859,14 @@ func (v *BaseSnowflakeParserVisitor) VisitCommon_table_expression(ctx *Common_ta
 	return v.VisitChildren(ctx)
 }
 
+func (v *BaseSnowflakeParserVisitor) VisitAnchor_clause(ctx *Anchor_clauseContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseSnowflakeParserVisitor) VisitRecursive_clause(ctx *Recursive_clauseContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
 func (v *BaseSnowflakeParserVisitor) VisitSelect_statement(ctx *Select_statementContext) interface{} {
 	return v.VisitChildren(ctx)
 }
