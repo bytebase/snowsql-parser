@@ -3733,7 +3733,7 @@ select_list_no_top
     ;
 
 select_list_top
-    : all_distinct? top_clause? select_list
+    : all_distinct? top_clause select_list
     ;
 
 select_list
