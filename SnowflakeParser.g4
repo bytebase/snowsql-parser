@@ -26,11 +26,11 @@ parser grammar SnowflakeParser;
 options { tokenVocab=SnowflakeLexer; }
 
 snowflake_file
-    : batch* EOF
+    : (batch (SEMI batch)* SEMI?)? EOF
     ;
 
 batch
-    : sql_command SEMI?
+    : sql_command
     ;
 
 sql_command
