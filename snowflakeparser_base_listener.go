@@ -2018,6 +2018,12 @@ func (s *BaseSnowflakeParserListener) EnterUndrop_database(ctx *Undrop_databaseC
 // ExitUndrop_database is called when production undrop_database is exited.
 func (s *BaseSnowflakeParserListener) ExitUndrop_database(ctx *Undrop_databaseContext) {}
 
+// EnterUndrop_dynamic_table is called when production undrop_dynamic_table is entered.
+func (s *BaseSnowflakeParserListener) EnterUndrop_dynamic_table(ctx *Undrop_dynamic_tableContext) {}
+
+// ExitUndrop_dynamic_table is called when production undrop_dynamic_table is exited.
+func (s *BaseSnowflakeParserListener) ExitUndrop_dynamic_table(ctx *Undrop_dynamic_tableContext) {}
+
 // EnterUndrop_schema is called when production undrop_schema is entered.
 func (s *BaseSnowflakeParserListener) EnterUndrop_schema(ctx *Undrop_schemaContext) {}
 

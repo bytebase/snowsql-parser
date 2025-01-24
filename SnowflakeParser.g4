@@ -2746,6 +2746,7 @@ arg_types
 undrop_command
     //: undrop_object
     : undrop_database
+    | undrop_dynamic_table
     | undrop_schema
     | undrop_table
     | undrop_tag
@@ -2753,6 +2754,10 @@ undrop_command
 
 undrop_database
     : UNDROP DATABASE id_
+    ;
+
+undrop_dynamic_table
+    : UNDROP DYNAMIC TABLE id_
     ;
 
 undrop_schema

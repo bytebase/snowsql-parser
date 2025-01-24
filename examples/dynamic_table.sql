@@ -15,3 +15,5 @@ show dynamic tables like 'dt%';
 show dynamic tables in account;
 
 drop dynamic table dt1;
+
+undrop dynamic table dt1;

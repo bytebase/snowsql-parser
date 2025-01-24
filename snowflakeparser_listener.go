@@ -946,6 +946,9 @@ type SnowflakeParserListener interface {
 	// EnterUndrop_database is called when entering the undrop_database production.
 	EnterUndrop_database(c *Undrop_databaseContext)
 
+	// EnterUndrop_dynamic_table is called when entering the undrop_dynamic_table production.
+	EnterUndrop_dynamic_table(c *Undrop_dynamic_tableContext)
+
 	// EnterUndrop_schema is called when entering the undrop_schema production.
 	EnterUndrop_schema(c *Undrop_schemaContext)
 
@@ -2565,6 +2568,9 @@ type SnowflakeParserListener interface {
 
 	// ExitUndrop_database is called when exiting the undrop_database production.
 	ExitUndrop_database(c *Undrop_databaseContext)
+
+	// ExitUndrop_dynamic_table is called when exiting the undrop_dynamic_table production.
+	ExitUndrop_dynamic_table(c *Undrop_dynamic_tableContext)
 
 	// ExitUndrop_schema is called when exiting the undrop_schema production.
 	ExitUndrop_schema(c *Undrop_schemaContext)

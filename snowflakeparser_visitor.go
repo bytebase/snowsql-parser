@@ -946,6 +946,9 @@ type SnowflakeParserVisitor interface {
 	// Visit a parse tree produced by SnowflakeParser#undrop_database.
 	VisitUndrop_database(ctx *Undrop_databaseContext) interface{}
 
+	// Visit a parse tree produced by SnowflakeParser#undrop_dynamic_table.
+	VisitUndrop_dynamic_table(ctx *Undrop_dynamic_tableContext) interface{}
+
 	// Visit a parse tree produced by SnowflakeParser#undrop_schema.
 	VisitUndrop_schema(ctx *Undrop_schemaContext) interface{}
 

@@ -1259,6 +1259,10 @@ func (v *BaseSnowflakeParserVisitor) VisitUndrop_database(ctx *Undrop_databaseCo
 	return v.VisitChildren(ctx)
 }
 
+func (v *BaseSnowflakeParserVisitor) VisitUndrop_dynamic_table(ctx *Undrop_dynamic_tableContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
 func (v *BaseSnowflakeParserVisitor) VisitUndrop_schema(ctx *Undrop_schemaContext) interface{} {
 	return v.VisitChildren(ctx)
 }
