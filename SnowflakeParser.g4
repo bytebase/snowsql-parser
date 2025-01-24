@@ -483,6 +483,7 @@ alter_command
     | alter_api_integration
     | alter_connection
     | alter_database
+    | alter_dynamic_table
     | alter_external_table
     | alter_failover_group
     | alter_file_format
@@ -696,6 +697,13 @@ database_property
 
 account_id_list
     : account_identifier (COMMA account_identifier)*
+    ;
+
+alter_dynamic_table
+    : ALTER DYNAMIC TABLE id_ ( resume_suspend
+                              | REFRESH
+                              | SET WAREHOUSE EQ id_
+                              )
     ;
 
 alter_external_table
@@ -1388,6 +1396,7 @@ create_command
     | create_object_clone
     | create_connection
     | create_database
+    | create_dynamic_table
     | create_external_function
     | create_external_table
     | create_failover_group
@@ -1505,6 +1514,13 @@ create_database
             default_ddl_collation?
             with_tags?
             comment_clause?
+    ;
+
+create_dynamic_table
+    : CREATE or_replace? DYNAMIC TABLE id_
+        TARGET_LAG EQ (string | DOWNSTREAM)
+        WAREHOUSE EQ wh=id_
+        AS query_statement
     ;
 
 clone_at_before
@@ -2560,6 +2576,7 @@ drop_command
     | drop_alert
     | drop_connection
     | drop_database
+    | drop_dynamic_table
     | drop_external_table
     | drop_failover_group
     | drop_file_format
@@ -2603,6 +2620,10 @@ drop_connection
 
 drop_database
     : DROP DATABASE if_exists? id_ cascade_restrict?
+    ;
+
+drop_dynamic_table
+    : DROP DYNAMIC TABLE if_exists? id_
     ;
 
 drop_external_table
@@ -2725,6 +2746,7 @@ arg_types
 undrop_command
     //: undrop_object
     : undrop_database
+    | undrop_dynamic_table
     | undrop_schema
     | undrop_table
     | undrop_tag
@@ -2732,6 +2754,10 @@ undrop_command
 
 undrop_database
     : UNDROP DATABASE id_
+    ;
+
+undrop_dynamic_table
+    : UNDROP DYNAMIC TABLE id_
     ;
 
 undrop_schema
@@ -2804,6 +2830,7 @@ describe
 describe_command
     : describe_alert
     | describe_database
+    | describe_dynamic_table
     | describe_external_table
     | describe_file_format
     | describe_function
@@ -2836,6 +2863,10 @@ describe_alert
 
 describe_database
     : describe DATABASE id_
+    ;
+
+describe_dynamic_table
+    : describe DYNAMIC TABLE id_
     ;
 
 describe_external_table
@@ -2944,6 +2975,7 @@ show_command
     | show_databases_in_replication_group
     | show_delegated_authorizations
     | show_external_functions
+    | show_dynamic_tables
     | show_external_tables
     | show_failover_groups
     | show_file_formats
@@ -3033,6 +3065,13 @@ show_delegated_authorizations
 
 show_external_functions
     : SHOW EXTERNAL FUNCTIONS like_pattern?
+    ;
+
+show_dynamic_tables
+    : SHOW DYNAMIC TABLES like_pattern?
+        ( IN ( ACCOUNT | DATABASE id_? | SCHEMA? schema_name? ) )?
+        starts_with?
+        limit_rows?
     ;
 
 show_external_tables
@@ -4275,7 +4314,9 @@ supplement_non_reserved_words
     | DISK
     | DISPLAY_NAME
     | DO
+    | DOWNSTREAM
     | DOUBLE
+    | DYNAMIC
     | ECONOMY
     | EDITION
     | EMAIL
@@ -4854,6 +4895,7 @@ supplement_non_reserved_words
     | TAG
     | TAGS
     | TARGET
+    | TARGET_LAG
     | TASK
     | TASKS
     | TEMP

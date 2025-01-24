@@ -1,4 +1,4 @@
-// Code generated from SnowflakeParser.g4 by ANTLR 4.13.1. DO NOT EDIT.
+// Code generated from SnowflakeParser.g4 by ANTLR 4.13.2. DO NOT EDIT.
 
 package parser // SnowflakeParser
 import "github.com/antlr4-go/antlr/v4"
@@ -247,6 +247,9 @@ type SnowflakeParserVisitor interface {
 	// Visit a parse tree produced by SnowflakeParser#account_id_list.
 	VisitAccount_id_list(ctx *Account_id_listContext) interface{}
 
+	// Visit a parse tree produced by SnowflakeParser#alter_dynamic_table.
+	VisitAlter_dynamic_table(ctx *Alter_dynamic_tableContext) interface{}
+
 	// Visit a parse tree produced by SnowflakeParser#alter_external_table.
 	VisitAlter_external_table(ctx *Alter_external_tableContext) interface{}
 
@@ -489,6 +492,9 @@ type SnowflakeParserVisitor interface {
 
 	// Visit a parse tree produced by SnowflakeParser#create_database.
 	VisitCreate_database(ctx *Create_databaseContext) interface{}
+
+	// Visit a parse tree produced by SnowflakeParser#create_dynamic_table.
+	VisitCreate_dynamic_table(ctx *Create_dynamic_tableContext) interface{}
 
 	// Visit a parse tree produced by SnowflakeParser#clone_at_before.
 	VisitClone_at_before(ctx *Clone_at_beforeContext) interface{}
@@ -844,6 +850,9 @@ type SnowflakeParserVisitor interface {
 	// Visit a parse tree produced by SnowflakeParser#drop_database.
 	VisitDrop_database(ctx *Drop_databaseContext) interface{}
 
+	// Visit a parse tree produced by SnowflakeParser#drop_dynamic_table.
+	VisitDrop_dynamic_table(ctx *Drop_dynamic_tableContext) interface{}
+
 	// Visit a parse tree produced by SnowflakeParser#drop_external_table.
 	VisitDrop_external_table(ctx *Drop_external_tableContext) interface{}
 
@@ -937,6 +946,9 @@ type SnowflakeParserVisitor interface {
 	// Visit a parse tree produced by SnowflakeParser#undrop_database.
 	VisitUndrop_database(ctx *Undrop_databaseContext) interface{}
 
+	// Visit a parse tree produced by SnowflakeParser#undrop_dynamic_table.
+	VisitUndrop_dynamic_table(ctx *Undrop_dynamic_tableContext) interface{}
+
 	// Visit a parse tree produced by SnowflakeParser#undrop_schema.
 	VisitUndrop_schema(ctx *Undrop_schemaContext) interface{}
 
@@ -990,6 +1002,9 @@ type SnowflakeParserVisitor interface {
 
 	// Visit a parse tree produced by SnowflakeParser#describe_database.
 	VisitDescribe_database(ctx *Describe_databaseContext) interface{}
+
+	// Visit a parse tree produced by SnowflakeParser#describe_dynamic_table.
+	VisitDescribe_dynamic_table(ctx *Describe_dynamic_tableContext) interface{}
 
 	// Visit a parse tree produced by SnowflakeParser#describe_external_table.
 	VisitDescribe_external_table(ctx *Describe_external_tableContext) interface{}
@@ -1095,6 +1110,9 @@ type SnowflakeParserVisitor interface {
 
 	// Visit a parse tree produced by SnowflakeParser#show_external_functions.
 	VisitShow_external_functions(ctx *Show_external_functionsContext) interface{}
+
+	// Visit a parse tree produced by SnowflakeParser#show_dynamic_tables.
+	VisitShow_dynamic_tables(ctx *Show_dynamic_tablesContext) interface{}
 
 	// Visit a parse tree produced by SnowflakeParser#show_external_tables.
 	VisitShow_external_tables(ctx *Show_external_tablesContext) interface{}

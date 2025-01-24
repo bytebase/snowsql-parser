@@ -1,4 +1,4 @@
-// Code generated from SnowflakeParser.g4 by ANTLR 4.13.1. DO NOT EDIT.
+// Code generated from SnowflakeParser.g4 by ANTLR 4.13.2. DO NOT EDIT.
 
 package parser // SnowflakeParser
 import "github.com/antlr4-go/antlr/v4"
@@ -327,6 +327,10 @@ func (v *BaseSnowflakeParserVisitor) VisitAccount_id_list(ctx *Account_id_listCo
 	return v.VisitChildren(ctx)
 }
 
+func (v *BaseSnowflakeParserVisitor) VisitAlter_dynamic_table(ctx *Alter_dynamic_tableContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
 func (v *BaseSnowflakeParserVisitor) VisitAlter_external_table(ctx *Alter_external_tableContext) interface{} {
 	return v.VisitChildren(ctx)
 }
@@ -648,6 +652,10 @@ func (v *BaseSnowflakeParserVisitor) VisitCreate_connection(ctx *Create_connecti
 }
 
 func (v *BaseSnowflakeParserVisitor) VisitCreate_database(ctx *Create_databaseContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseSnowflakeParserVisitor) VisitCreate_dynamic_table(ctx *Create_dynamic_tableContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
@@ -1123,6 +1131,10 @@ func (v *BaseSnowflakeParserVisitor) VisitDrop_database(ctx *Drop_databaseContex
 	return v.VisitChildren(ctx)
 }
 
+func (v *BaseSnowflakeParserVisitor) VisitDrop_dynamic_table(ctx *Drop_dynamic_tableContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
 func (v *BaseSnowflakeParserVisitor) VisitDrop_external_table(ctx *Drop_external_tableContext) interface{} {
 	return v.VisitChildren(ctx)
 }
@@ -1247,6 +1259,10 @@ func (v *BaseSnowflakeParserVisitor) VisitUndrop_database(ctx *Undrop_databaseCo
 	return v.VisitChildren(ctx)
 }
 
+func (v *BaseSnowflakeParserVisitor) VisitUndrop_dynamic_table(ctx *Undrop_dynamic_tableContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
 func (v *BaseSnowflakeParserVisitor) VisitUndrop_schema(ctx *Undrop_schemaContext) interface{} {
 	return v.VisitChildren(ctx)
 }
@@ -1316,6 +1332,10 @@ func (v *BaseSnowflakeParserVisitor) VisitDescribe_alert(ctx *Describe_alertCont
 }
 
 func (v *BaseSnowflakeParserVisitor) VisitDescribe_database(ctx *Describe_databaseContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseSnowflakeParserVisitor) VisitDescribe_dynamic_table(ctx *Describe_dynamic_tableContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
@@ -1456,6 +1476,10 @@ func (v *BaseSnowflakeParserVisitor) VisitShow_delegated_authorizations(ctx *Sho
 }
 
 func (v *BaseSnowflakeParserVisitor) VisitShow_external_functions(ctx *Show_external_functionsContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseSnowflakeParserVisitor) VisitShow_dynamic_tables(ctx *Show_dynamic_tablesContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
