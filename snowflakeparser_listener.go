@@ -1,4 +1,4 @@
-// Code generated from SnowflakeParser.g4 by ANTLR 4.13.1. DO NOT EDIT.
+// Code generated from SnowflakeParser.g4 by ANTLR 4.13.2. DO NOT EDIT.
 
 package parser // SnowflakeParser
 import "github.com/antlr4-go/antlr/v4"
@@ -247,6 +247,9 @@ type SnowflakeParserListener interface {
 	// EnterAccount_id_list is called when entering the account_id_list production.
 	EnterAccount_id_list(c *Account_id_listContext)
 
+	// EnterAlter_dynamic_table is called when entering the alter_dynamic_table production.
+	EnterAlter_dynamic_table(c *Alter_dynamic_tableContext)
+
 	// EnterAlter_external_table is called when entering the alter_external_table production.
 	EnterAlter_external_table(c *Alter_external_tableContext)
 
@@ -489,6 +492,9 @@ type SnowflakeParserListener interface {
 
 	// EnterCreate_database is called when entering the create_database production.
 	EnterCreate_database(c *Create_databaseContext)
+
+	// EnterCreate_dynamic_table is called when entering the create_dynamic_table production.
+	EnterCreate_dynamic_table(c *Create_dynamic_tableContext)
 
 	// EnterClone_at_before is called when entering the clone_at_before production.
 	EnterClone_at_before(c *Clone_at_beforeContext)
@@ -844,6 +850,9 @@ type SnowflakeParserListener interface {
 	// EnterDrop_database is called when entering the drop_database production.
 	EnterDrop_database(c *Drop_databaseContext)
 
+	// EnterDrop_dynamic_table is called when entering the drop_dynamic_table production.
+	EnterDrop_dynamic_table(c *Drop_dynamic_tableContext)
+
 	// EnterDrop_external_table is called when entering the drop_external_table production.
 	EnterDrop_external_table(c *Drop_external_tableContext)
 
@@ -991,6 +1000,9 @@ type SnowflakeParserListener interface {
 	// EnterDescribe_database is called when entering the describe_database production.
 	EnterDescribe_database(c *Describe_databaseContext)
 
+	// EnterDescribe_dynamic_table is called when entering the describe_dynamic_table production.
+	EnterDescribe_dynamic_table(c *Describe_dynamic_tableContext)
+
 	// EnterDescribe_external_table is called when entering the describe_external_table production.
 	EnterDescribe_external_table(c *Describe_external_tableContext)
 
@@ -1095,6 +1107,9 @@ type SnowflakeParserListener interface {
 
 	// EnterShow_external_functions is called when entering the show_external_functions production.
 	EnterShow_external_functions(c *Show_external_functionsContext)
+
+	// EnterShow_dynamic_tables is called when entering the show_dynamic_tables production.
+	EnterShow_dynamic_tables(c *Show_dynamic_tablesContext)
 
 	// EnterShow_external_tables is called when entering the show_external_tables production.
 	EnterShow_external_tables(c *Show_external_tablesContext)
@@ -1852,6 +1867,9 @@ type SnowflakeParserListener interface {
 	// ExitAccount_id_list is called when exiting the account_id_list production.
 	ExitAccount_id_list(c *Account_id_listContext)
 
+	// ExitAlter_dynamic_table is called when exiting the alter_dynamic_table production.
+	ExitAlter_dynamic_table(c *Alter_dynamic_tableContext)
+
 	// ExitAlter_external_table is called when exiting the alter_external_table production.
 	ExitAlter_external_table(c *Alter_external_tableContext)
 
@@ -2094,6 +2112,9 @@ type SnowflakeParserListener interface {
 
 	// ExitCreate_database is called when exiting the create_database production.
 	ExitCreate_database(c *Create_databaseContext)
+
+	// ExitCreate_dynamic_table is called when exiting the create_dynamic_table production.
+	ExitCreate_dynamic_table(c *Create_dynamic_tableContext)
 
 	// ExitClone_at_before is called when exiting the clone_at_before production.
 	ExitClone_at_before(c *Clone_at_beforeContext)
@@ -2449,6 +2470,9 @@ type SnowflakeParserListener interface {
 	// ExitDrop_database is called when exiting the drop_database production.
 	ExitDrop_database(c *Drop_databaseContext)
 
+	// ExitDrop_dynamic_table is called when exiting the drop_dynamic_table production.
+	ExitDrop_dynamic_table(c *Drop_dynamic_tableContext)
+
 	// ExitDrop_external_table is called when exiting the drop_external_table production.
 	ExitDrop_external_table(c *Drop_external_tableContext)
 
@@ -2596,6 +2620,9 @@ type SnowflakeParserListener interface {
 	// ExitDescribe_database is called when exiting the describe_database production.
 	ExitDescribe_database(c *Describe_databaseContext)
 
+	// ExitDescribe_dynamic_table is called when exiting the describe_dynamic_table production.
+	ExitDescribe_dynamic_table(c *Describe_dynamic_tableContext)
+
 	// ExitDescribe_external_table is called when exiting the describe_external_table production.
 	ExitDescribe_external_table(c *Describe_external_tableContext)
 
@@ -2700,6 +2727,9 @@ type SnowflakeParserListener interface {
 
 	// ExitShow_external_functions is called when exiting the show_external_functions production.
 	ExitShow_external_functions(c *Show_external_functionsContext)
+
+	// ExitShow_dynamic_tables is called when exiting the show_dynamic_tables production.
+	ExitShow_dynamic_tables(c *Show_dynamic_tablesContext)
 
 	// ExitShow_external_tables is called when exiting the show_external_tables production.
 	ExitShow_external_tables(c *Show_external_tablesContext)

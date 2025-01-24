@@ -1,4 +1,4 @@
-// Code generated from SnowflakeParser.g4 by ANTLR 4.13.1. DO NOT EDIT.
+// Code generated from SnowflakeParser.g4 by ANTLR 4.13.2. DO NOT EDIT.
 
 package parser // SnowflakeParser
 import "github.com/antlr4-go/antlr/v4"
@@ -513,6 +513,12 @@ func (s *BaseSnowflakeParserListener) EnterAccount_id_list(ctx *Account_id_listC
 
 // ExitAccount_id_list is called when production account_id_list is exited.
 func (s *BaseSnowflakeParserListener) ExitAccount_id_list(ctx *Account_id_listContext) {}
+
+// EnterAlter_dynamic_table is called when production alter_dynamic_table is entered.
+func (s *BaseSnowflakeParserListener) EnterAlter_dynamic_table(ctx *Alter_dynamic_tableContext) {}
+
+// ExitAlter_dynamic_table is called when production alter_dynamic_table is exited.
+func (s *BaseSnowflakeParserListener) ExitAlter_dynamic_table(ctx *Alter_dynamic_tableContext) {}
 
 // EnterAlter_external_table is called when production alter_external_table is entered.
 func (s *BaseSnowflakeParserListener) EnterAlter_external_table(ctx *Alter_external_tableContext) {}
@@ -1043,6 +1049,12 @@ func (s *BaseSnowflakeParserListener) EnterCreate_database(ctx *Create_databaseC
 
 // ExitCreate_database is called when production create_database is exited.
 func (s *BaseSnowflakeParserListener) ExitCreate_database(ctx *Create_databaseContext) {}
+
+// EnterCreate_dynamic_table is called when production create_dynamic_table is entered.
+func (s *BaseSnowflakeParserListener) EnterCreate_dynamic_table(ctx *Create_dynamic_tableContext) {}
+
+// ExitCreate_dynamic_table is called when production create_dynamic_table is exited.
+func (s *BaseSnowflakeParserListener) ExitCreate_dynamic_table(ctx *Create_dynamic_tableContext) {}
 
 // EnterClone_at_before is called when production clone_at_before is entered.
 func (s *BaseSnowflakeParserListener) EnterClone_at_before(ctx *Clone_at_beforeContext) {}
@@ -1808,6 +1820,12 @@ func (s *BaseSnowflakeParserListener) EnterDrop_database(ctx *Drop_databaseConte
 // ExitDrop_database is called when production drop_database is exited.
 func (s *BaseSnowflakeParserListener) ExitDrop_database(ctx *Drop_databaseContext) {}
 
+// EnterDrop_dynamic_table is called when production drop_dynamic_table is entered.
+func (s *BaseSnowflakeParserListener) EnterDrop_dynamic_table(ctx *Drop_dynamic_tableContext) {}
+
+// ExitDrop_dynamic_table is called when production drop_dynamic_table is exited.
+func (s *BaseSnowflakeParserListener) ExitDrop_dynamic_table(ctx *Drop_dynamic_tableContext) {}
+
 // EnterDrop_external_table is called when production drop_external_table is entered.
 func (s *BaseSnowflakeParserListener) EnterDrop_external_table(ctx *Drop_external_tableContext) {}
 
@@ -2108,6 +2126,14 @@ func (s *BaseSnowflakeParserListener) EnterDescribe_database(ctx *Describe_datab
 // ExitDescribe_database is called when production describe_database is exited.
 func (s *BaseSnowflakeParserListener) ExitDescribe_database(ctx *Describe_databaseContext) {}
 
+// EnterDescribe_dynamic_table is called when production describe_dynamic_table is entered.
+func (s *BaseSnowflakeParserListener) EnterDescribe_dynamic_table(ctx *Describe_dynamic_tableContext) {
+}
+
+// ExitDescribe_dynamic_table is called when production describe_dynamic_table is exited.
+func (s *BaseSnowflakeParserListener) ExitDescribe_dynamic_table(ctx *Describe_dynamic_tableContext) {
+}
+
 // EnterDescribe_external_table is called when production describe_external_table is entered.
 func (s *BaseSnowflakeParserListener) EnterDescribe_external_table(ctx *Describe_external_tableContext) {
 }
@@ -2339,6 +2365,12 @@ func (s *BaseSnowflakeParserListener) EnterShow_external_functions(ctx *Show_ext
 // ExitShow_external_functions is called when production show_external_functions is exited.
 func (s *BaseSnowflakeParserListener) ExitShow_external_functions(ctx *Show_external_functionsContext) {
 }
+
+// EnterShow_dynamic_tables is called when production show_dynamic_tables is entered.
+func (s *BaseSnowflakeParserListener) EnterShow_dynamic_tables(ctx *Show_dynamic_tablesContext) {}
+
+// ExitShow_dynamic_tables is called when production show_dynamic_tables is exited.
+func (s *BaseSnowflakeParserListener) ExitShow_dynamic_tables(ctx *Show_dynamic_tablesContext) {}
 
 // EnterShow_external_tables is called when production show_external_tables is entered.
 func (s *BaseSnowflakeParserListener) EnterShow_external_tables(ctx *Show_external_tablesContext) {}
